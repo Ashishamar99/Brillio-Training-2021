@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Panels</title>
+</head>
+<body>
+        <div style="background-color: lightblue;">
+            <hr />
+            <center>
+                <nav><a href="index.html"><button class="btn btn-primary">Index Page</button></a></nav>
+            </center>
+            <hr />
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                A panel in bootstrap is a bordered box with some padding around its content. For the default panel, we will have to specify a "panel panel-default" as a class and a "panel-body" for the body.
+            </div>
+        </div>
+
+        <br />
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Here's the Heading.
+            </div>
+
+            <div class="panel-body">
+                Here's the body.
+            </div>
+
+            <div class="panel-footer">
+                Panel footer goes here. We can do a permutation of the 3 components, heading, body and footer.
+        </div>
+        <br />
+
+        <div class="panel-group">
+            <div class="panel panel-success">
+                <div class="panel-heading">Panel Header success</div>
+                <div class="panel-body">All 3 panels here are under a panel group. Now, these panels can also be colored by using the color classes of the buttons, instead of default in "panel panel-default"</div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Panel Header primary</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading">Panel Header with danger</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+        <br />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

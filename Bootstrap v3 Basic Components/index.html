@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Brillio Training</title>
+</head>
+
+<body style="text-align: center; margin-top: 2%; background-color: lightblue;">
+
+    <h2></h2>
+    <div class="container">
+        <div class="list-group">
+            <a href="tables.html" class="list-group-item">Tables</a>
+            <a href="images.html" class="list-group-item">Images</a>
+            <a href="wells.html" class="list-group-item">Wells</a>
+            <a href="alerts.html" class="list-group-item">Alerts</a>
+            <a href="buttons.html" class="list-group-item">Buttons and Button Groups</a>
+            <a id="triggerlistgrp" class="list-group-item">List Groups</a>
+            <a href="pagination.html" class="list-group-item">Pagination</a>
+            <a href="pager.html" class="list-group-item">Pager</a>
+            <a href="panels.html" class="list-group-item">Panels</a>
+            <a href="dropdowns.html" class="list-group-item">Dropdowns</a>
+            <a href="collapses.html" class="list-group-item">Collapsibles</a>
+        </div>
+    </div>
+
+    <div class="well" style="font-weight: bold;background-color: yellow;visibility:hidden; display: inline" id="noteOnListGrps">
+        This index page menu is made of list groups. Click <span style="color:blue; text-decoration:underline; text-align:center" id="makeNoteDisappear">here</span> to make this note disappear.
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $("#triggerlistgrp").click(function(){
+            noteOnListGrps = $("#noteOnListGrps")[0];
+            if (noteOnListGrps.style.visibility == "visible"){
+                noteOnListGrps.style.visibility = "hidden";
+            }
+            else{
+                noteOnListGrps.style.visibility = "visible";
+                alert("Check at the bottom of this page for a note.");
+            }
+        });
+
+        $("#makeNoteDisappear").click(function(){
+            noteOnListGrps = $("#noteOnListGrps")[0];
+            if (noteOnListGrps.style.visibility == "visible"){
+                noteOnListGrps.style.visibility = "hidden";
+            }
+            else{
+                noteOnListGrps.style.visibility = "visible";
+            }
+        });
+    </script>
+</body>
+</html>
