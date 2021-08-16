@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fruits and Vegetables Page</title>
+</head>
+
+<style>
+
+    div i a{
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    .second-nav{
+        color: black;
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+
+    <nav style="background-color: greenyellow;" class="navbar navbar-dark">
+
+        <div class="social-media-handles">
+        <!-- simple icons link - https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/ -->
+        <a href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" alt="facebook icon" height="30" width="30" /> </a> &nbsp;
+        <a href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="linkedin icon" height="30" width="30" /> </a> &nbsp;
+        <a href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/snapchat.svg" alt="snapchat icon" height="30" width="30" /> </a> &nbsp;
+        <a href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" alt="twitter icon" height="30" width="30" /> </a> &nbsp;
+        <a href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" alt="instagram icon" height="30" width="30" /> </a> &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        
+        <div class="contact-info">
+            <i class="fa fa-phone"> <a href="tel:+919483952634">+91-9483952634</a> </i>&nbsp;&nbsp;
+            <i class="fa fa-envelope"> <a href="mailto:ashish.amar@brillio.com">ashish.amar@brillio.com</a> </i>
+        </div>
+
+        <div class="general-info" style="float:right">
+            <a style="text-decoration:none; font-weight:bold; color:black;" href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/googlemaps.svg" alt="location icon" height="30" width="30" /> Bengaluru </a> &nbsp;
+            <i class="fa fa-truck"> <a href="#"> Track Order </a> </i> &nbsp;
+            <i class="fa fa-user"><a href="#"> Log In | Sign Up </a> </i> &nbsp;
+            <!-- <a style="text-decoration:none; font-weight:bold; color:black;" href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/googlemaps.svg" alt="truck icon" height="30" width="30" /> Bengaluru </a> &nbsp;
+            <a style="text-decoration:none; font-weight:bold; color:black;" href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/googlemaps.svg" alt="location icon" height="30" width="30" /> Bengaluru </a> &nbsp; -->
+        </div>
+
+    </nav>
+
+    <div class="container row">
+
+        <div style="color: greenyellow; font-weight: bold; font-size: 50px">ROYAL</div>
+        <div>Fruits and Vegetables</div>
+
+        <div class="col-md input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search bar" aria-describedby="basic-addon2">
+            <span class=" btn btn-default btn-large btn-outline-dark input-group-text" id="search-button" style="background-color: grey; font-weight: bold;">
+                <i class="fa fa-search"> Search </i>
+            </span>
+        </div>
+
+        <div class="col-sm" style="float: right;">
+            <button class="btn btn-default btn-lg btn-outline-dark text"href="#"> <i class="fa fa-shopping-cart"> </i> Cart </button> &nbsp;
+        </div>
+    </div>
+
+    <div class="container second-nav">
+        <nav style="margin-top: 2rem;" class="navbar">
+            <div class="container-fluid" style="display: inline">
+            <div style="background-color: greenyellow; padding-left: 1rem;" class="navbar-header">
+                <a class="navbar-brand" href="#"><i class="fa fa-bars"></i> SHOP BY CATEGORY</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">HOME</a></li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Page 1-1</a></li>
+                    <li><a href="#">Page 1-2</a></li>
+                    <li><a href="#">Page 1-3</a></li>
+                </ul>
+                </li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">HEALTH</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">VIDEOS</a></li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Page 1-1</a></li>
+                    <li><a href="#">Page 1-2</a></li>
+                    <li><a href="#">Page 1-3</a></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/875627289637953539/876706412275839046/vegetables.png" class="img-rounded" width="100%"/>
+    </div>
+
+    <!-- <div class="fruits-section">
+        <br />
+        <center>
+        <h2 style="font-family: cursive;">Fruits</h2>
+        </center>
+        <br />
+    </div> -->
+
+    <br />
+
+    <div class="container">
+        <div class="row" id="fruits">
+            <center><h1>Fruits</h1></center>
+        </div>
+        <div class="row" style="align-content: center;">
+            <div class="col-sm-3" style="border: 1px;">
+                <center><img type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718328918474793/mango.png" height="200px" width="200px" class="img-rounded" style="align-content: center;" /></center>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Mango.</p>
+            </div>
+            <div class="col-sm-3">
+                <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718323180642345/grape.png" height="200px" width="200px" class="img-rounded"></center>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Grapes.</p>
+            </div>
+            <div class="col-sm-3">
+                <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718332395544666/pineapple.png" height="200px" width="200px" class="img-rounded"></center>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Pineapple.</p>
+            </div>
+            <div class="col-sm-3">
+                <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718318537556058/banana.png" height="200px" width="200px" class="img-rounded"></center>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Banana.</p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row" id="product">
+        <center>
+            <h1>Products</h1>
+        </center>
+    </div>
+    <div class="row" style="align-content: center;">
+        <div class="col-sm-4" style="border: 1px;">
+            <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718328918474793/mango.png" height="200px" width="200px" class="img-rounded"
+                style="align-content: center;"></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Mango.</p>
+        </div>
+        <div class="col-sm-4">
+            <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718323180642345/grape.png" height="200px" width="200px" class="img-rounded"></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Grapes.</p>
+        </div>
+        <div class="col-sm-4">
+            <center><embed type="image/png" src="https://cdn.discordapp.com/attachments/875627289637953539/876718332395544666/pineapple.png" height="200px" width="200px" class="img-rounded"></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum about Pineapple.</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <center>
+            <h1>About</h1>
+        </center>
+
+        <center>
+        <embed style="height: 80%; width: 80%" src="https://cdn.discordapp.com/attachments/875627289637953539/876718315857399819/about.png" type="image/png">
+        </center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type
+                specimen
+                book.</p>
+    </div>
+    <br />
+
+    <div class="row">
+        <center>
+            <h1>Contact Us</h1>
+        </center>
+
+        <div class="col-sm-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.005301343341!2d77.59741061430383!3d12.90738041977773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1505c3dfa039%3A0x5dfc74eca9b0910c!2sBrillio!5e0!3m2!1sen!2sin!4v1629098731365!5m2!1sen!2sin" width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="col-sm-8" style="padding-left: 20%;">
+            <p>
+                <h3>Where we are</h3><br />
+                <a style="text-decoration:none; font-weight:bold; color:black;" href="https://www.google.com/maps/place/Brillio/@12.9074501,77.598064,17.46z/data=!4m12!1m6!3m5!1s0x3bae1505c3dfa039:0x5dfc74eca9b0910c!2sBrillio!8m2!3d12.9072963!4d77.5995346!3m4!1s0x3bae1505c3dfa039:0x5dfc74eca9b0910c!8m2!3d12.9072963!4d77.5995346" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/googlemaps.svg" alt="location icon" height="30" width="30" /> Mini Forest, 58, 1st Main Rd, Sarakki Industrial Layout, Dollar Layout, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078 </a> &nbsp;
+            </p>
+            <hr />
+
+            <p>
+                <h3>General Enquiries</h3><br />
+                <a style="text-decoration:none; font-weight:bold; color:black;" href="mailto: ashish.amar@brillio.com" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/gmail.svg" alt="mail icon" height="30" width="30" /> ashish.amar@brillio.com </a> &nbsp;
+            </p>
+            <hr />
+
+            <p>
+                <h3>Call Us</h3><br />
+                <i class="fa fa-phone"> <a href="tel:+919483952634">+91-9483952634</a> </i>
+                <!-- <a style="text-decoration:none; font-weight:bold; color:black;" href="tel:+919483952634" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/googlemaps.svg" alt="phone icon" height="30" width="30" /> +919483952634 </a> &nbsp; -->
+            </p>
+            <hr />
+
+            <p>
+                <h3>Our Timing</h3><br />
+                <a style="text-decoration:none; font-weight:bold; color:black;" href="#" > <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/clockify.svg" alt="clock icon" height="30" width="30" /> Mon - Fri, 9:30 AM To 5:30 PM </a> &nbsp;
+            </p>
+            <hr />
+
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="container">
+        <center>
+            <h1>Some more info about ourselves</h1>
+        </center>
+
+        <div class="row">
+            <div class="col-4">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Overview
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Overview of Brillio</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Put Iframe here -->
+                                <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/3lgNu6QJ4i0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </center>
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Why Brillio ?
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Why Brillio ?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Put Iframe here -->
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/50NvFJ650NM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-4">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Work Culture
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Work Culture at Brillio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Put Iframe here -->
+                        <center>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_QcLjG1cfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </center>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <footer>
+        <center>
+        <div style="text-align:center; color:white; background-color:grey; font-family:'Trebuchet MS'; padding: 1rem; width:100%;">
+                <h4>Copyrights Reserved Brillio @2021</h4>
+        </div>
+        </center>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>
