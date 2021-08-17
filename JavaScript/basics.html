@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JS Basics</title>
+</head>
+
+<body style="background-color: lightskyblue">
+
+    <h3>Things to do.</h3>
+    <ol>
+        <li>Javascript - Placement</li>
+        <li>Javascript - Variables</li>
+        <li>Javascript - Operators</li>
+        <li>Javascript - If...Else</li>
+        <li>Javascript - Switch Case</li>
+        <li>Javascript - While Loop</li>
+        <li>Javascript - For Loop</li>
+        <li>Javascript - For...in</li>
+        <li>Javascript - Loop Control</li>
+        <li>Javascript - Functions</li>
+        <li>Javascript - Events</li>
+
+        <!--
+        <li>Javascript - Cookies</li>
+        <li>Javascript - Objects</li>
+        <li>Javascript - Number</li>
+        <li>Javascript - Boolean</li>
+        <li>Javascript - Strings</li> -->
+        <li>Javascript - Arrays</li>
+        <!-- <li>Javascript - Date</li> -->
+    </ol>
+    <hr />
+
+    <div class="container">
+        <h3>Placements</h3>
+
+        <div class="btn btn-dark">
+            JS can be placed in head, body and head and body sections. Based on the placement of the code, it will be executed.
+            If JS is placed in the head tag, it will have to be written in the form of HTML Comments. However, in the new syntax, we can include only the code without writing it in the form of HTML comments. 
+        </div>
+        <hr />
+
+        <div>
+            <h3>Variables</h3>
+
+            <div>
+                Variables are declared by using the keywords var and let. let defines the variable in the scope, while var defines it in global scope.
+                Click on the button below to declare a variable called n and give it a value 5. And display the value as well.
+                <br />
+                <script>
+                    function declare_var(){
+                        var n = 5;
+                        alert(`Value of n is ${n}`);
+                    }
+                </script>
+                <button class ="btn btn-warning" onclick="declare_var()">Click Me</button>
+            </div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>Operators</h3>
+
+            <script>
+                function invoke_operators(n1, n2){
+
+                    msg = "Mathematical Operators - \n";
+                    msg += `${n1} + ${n2} = ${n1 + n2}\n`;
+                    msg += `${n1} - ${n2} = ${n1 - n2}\n`;
+                    msg += `${n1} * ${n2} = ${n1 * n2}\n`;
+                    msg += `${n1} / ${n2} = ${n1 / n2}\n`;
+
+                    msg += `\nComparision Operators - \n`;
+                    msg += `Equals Operator - ${n1} == ${n2} => ${n1 == n2}\n`;
+                    msg += `Not Equal Operator - ${n1} != ${n2} => ${n1 != n2}\n`;
+                    msg += `Greater Than Operator - ${n1} > ${n2} => ${n1 > n2}\n`;
+                    msg += `Less Than Operator - ${n1} < ${n2} => ${n1 < n2}\n`;
+
+                    msg += `\nLogical Operators - \n`;
+                    msg += `AND Operator - ${n1} && ${n2} => ${n1 && n2}\n`;
+                    msg += `OR Operator - ${n1} || ${n2} => ${n1 || n2}\n`;
+
+                    alert(msg);
+                }
+            </script>
+
+            <div>
+                Enter a number:: <input type="number" id="n1" /><br /><br />
+                Enter another number:: <input type="number" id="n2" /><br /><br />
+                <button class="btn btn-success" onclick="invoke_operators(Number(n1.value), Number(n2.value))">Invoke Operators</button>
+            </div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>If-Else</h3>
+
+            <script>
+                function check_vowel(c) {
+                    c = c.toLowerCase();
+                    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+                        alert("It is a vowel");
+                    }
+                    else{
+                        alert("Not a vowel");
+                    }
+                }
+            </script>
+
+            <div>
+                Enter a character:: <input type="text" maxlength="1" id="charinput" /><br /><br />
+                <button class="btn btn-success" onclick="check_vowel(charinput.value)">Check if it is a vowel or not.</button>
+            </div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>Loops</h3>
+
+            <script>
+                function invokeloops(c) {
+
+                    console.warn(c);
+                    msg = "Generated using For loop\n";
+                    for(var i=0;i<c;i++){
+                        msg += `${i}\n`;
+                    }
+
+                    msg += "Generated using while loop\n";
+                    var i=0;
+                    while(i<c){
+                        msg += `${i}\n`;
+                        i++;
+                    }
+
+                    msg += `Look at arrays example for a demo of the for in loop.`;
+                    alert(msg);
+                }
+            </script>
+
+            <div>
+                Enter a limit for numbers :: <input type="number" maxlength="1" id="charinputloop" /><br /><br />
+                <button class="btn btn-success" onclick="invokeloops(Number(charinputloop.value))">Generate Numbers</button>
+            </div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>Switch Case</h3>
+
+            <script>
+                function check_vowel_switch(c) {
+                    c = c.toLowerCase();
+                    
+                    switch(c){
+                        case 'a':
+                        case 'e':
+                        case 'i':
+                        case 'o':
+                        case 'u':
+                            alert('Is a Vowel !!🥳');
+                            break;
+                        default: alert('It isn\'t a vowel. 🙂');
+                    }
+                }
+            </script>
+
+            <div>
+                Enter a character:: <input type="text" maxlength="1" id="charinputswitch" /><br /><br />
+                <button class="btn btn-success" onclick="check_vowel_switch(charinputswitch.value)">Check if it is a vowel or not using switch.</button>
+            </div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>Loop Control</h3>
+
+            <script>
+                function loop_control(){
+
+                    msg = 'Generated numbers using loop controls \n';
+                    for(var i=1;i<10;i++){
+                        
+                        if(i==5){
+                            continue;
+                        }
+                        else if(i==7){
+                            break;
+                        }
+                        else{
+                            msg += `${i}, `;
+                        }
+                    }
+
+                    alert(msg);
+                }
+            </script>
+
+            <div>
+                Let's loop through numbers from 1 to 10 and break the flow at 7 and skip the number 5 using a 'continue'.
+                <br /><br />
+                <button class="btn btn-success" onclick="loop_control()">Do it!</button>
+            </div>
+
+        </div>
+        <hr />
+
+        <div>
+            <h3>Functions</h3>
+            <div>All the buttons in this page are connected to JS Functions
+                <br />
+                Functions in JS are defined by the keyword function followed by the function name and definition. Datatype of Function parameters need not be specified. 
+            </div> 
+        </div>
+        <hr />
+
+        <div>
+            <h3>Events</h3>
+
+            <div>Hover over the square to change the color to green.</div>
+            <div style="background-color: red; height: 100px; width: 100px;font-weight:bold;" id="square" onmouseover="document.getElementById('square').style['background-color'] = 'green'" ></div>
+        </div>
+        <hr />
+
+        <div>
+            <h3>Arrays</h3>
+
+            <script>
+                function arrayfunc(){
+                    arr = [];
+                    msg = "Array Contents \n";
+                    for(i=0;i<11;i++){
+                        arr.push(i);
+                        msg += String(arr) + " - After Pushing.\n";
+                    }
+                    alert(msg);
+                }
+            </script>
+
+            <div>
+                Let's loop through numbers from 1 to 10 and using a for in loop. We will be using array.push() to insert elements into the array.
+                <br /><br />
+                <button class="btn btn-success" onclick="arrayfunc()">Do it!</button>
+            </div>
+        </div>
+        <hr />
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- <div>
+    <h3>Variables</h3>
+</div>
+<hr /> -->
