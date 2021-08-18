@@ -17,7 +17,8 @@
         <li>
             <div class="container">
                 <h4>1. Write a JavaScript program to display the current day and time in the following format.  
-                    Sample Output : Today is : Tuesday.
+                    <br />
+                    Sample Output : Today is : Tuesday. <br />
                     Current time is : 10 PM : 30 : 38</h4>
                 
                     <script>
@@ -113,25 +114,50 @@
 
         <li>
             <div class="container">
+                <!-- References - 
+                https://www.tutorialspoint.com/javascript-sleep-function
+                https://www.geeksforgeeks.org/javascript-remove-the-last-item-from-an-array/ -->
+                
                 <h4>5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</h4>
                 <div>
                     <script>
-                        function rotatestr(){
+
+                        function sleep(ms){
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
+
+                        async function rotatestr(){
                             s = 'w3resource';
                             mylist = s.split('');
-                            rev = mylist.reverse();
 
-                            for(var i=s.length-1; i>=0;i--){
-                                temp = s[i];
-                                mylist.shift(1);
-                                console.log(mylist);
-                                tempstr = temp + mylist.reverse().join('');
+                            for(i=0;i<s.length;i++){
+
+                                tempstr = "";
+                                tempstr1 = mylist.pop();
+                                tempstr2 = mylist.join('');
+
+                                tempstr = tempstr1 + tempstr2;
+                                mylist = tempstr.split('');
                                 console.log(tempstr);
-                                // TODO: Complete This!!
-                            }
+                                document.getElementById("resultdiv").innerHTML = tempstr;
+                                await sleep(500);
                         }
+
+                            }
+                            // for(var i=s.length-1; i>=0;i--){
+                            //     temp = s[i];
+                            //     mylist.shift(1);
+                            //     console.log(mylist);
+                            //     tempstr = temp + mylist.reverse().join('');
+                            //     console.log(tempstr);
+                            //     // TODO: Complete This!!
+                            // }
                     </script>
                     <button class="btn btn-warning" onclick="rotatestr()">Do it!</button>
+                    <br /><br />
+                    <div id="resultdiv" class="alert alert-primary" role="alert">
+                        w3resource
+                    </div>
                 </div>
             </div>
         </li>
@@ -139,7 +165,7 @@
 
         <li>
             <div class="container">
-                <h4>Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</h4>
+                <h4>6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</h4>
                 <div>
                     <script>
                         function checkleap(){
