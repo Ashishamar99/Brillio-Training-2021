@@ -1,9 +1,9 @@
 {
-    "dept": [
+  "dept": [
     {
-        "id": 1,
-        "dname": "Admin",
-        "loc": "Chennai"
+      "id": 1,
+      "dname": "dsfsdf",
+      "loc": "sdfdsf"
     }
-    ]
+  ]
 }
