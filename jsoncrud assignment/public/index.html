@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Student Records CRUD</title>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="container" style="background-color: lightgrey;margin-top:5%; padding:5% ;text-align:center; border:1px solid black">
+        <button class="btn btn-primary" onclick="document.getElementsByClassName('inputFromUser')[0].style['visibility'] = 'visible'">Create Student</button><br /><br />
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#displayModal" >Show All Students</button><br /><br />
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="displayModal" tabindex="-1" aria-labelledby="displayModal" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Display Records.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="displayModalID" class="displayModalID modal-body">
+                        <!-- <table class="displayTable table table-dark table-striped">
+                            <thead>
+                            <tr>
+                                <th data-field="id">
+                                <span scope="col">
+                                    Student ID
+                                </span>
+                                </th>
+                                <th data-field="usn">
+                                    <span scope="col">
+                                        Student USN 
+                                    </span>
+                                </th>
+                                <th data-field="sname">
+                                <span scope="col">
+                                    Student Name 
+                                </span>
+                                </th>
+                                <th data-field="dept">
+                                <span scope="col">
+                                    Department 
+                                </span>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table> -->
+
+                        <script>
+                            displayRecords();
+                        </script>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+
+        
+        
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#inputIDModal" onclick="document.getElementsByClassName('inputFromUser')[0].style['visibility'] = 'visible'" >Update Student</button><br /><br />
+        
+        <!-- Modal -->
+        <div class="modal fade" id="inputIDModal" tabindex="-1" aria-labelledby="inputIDModal" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter ID of the record you wish to update / Delete.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">ID: </span>
+                        <input id="idfield" type="number" class="form-control" placeholder="Enter ID" aria-label="id" aria-describedby="basic-addon1">
+                    </div>
+
+                    <br />
+                    <div class="input-group mb-3">
+                        <div class="form-check form-switch">
+                            <input onchange="updateChoiceLabel()" class="form-check-input" type="checkbox" id="actionForUpdateDelete" checked>
+                            <label id="actionLabelForUpdateDelete" class="form-check-label" for="actioncheck">Update</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="getRecordById(Number(document.getElementById('idfield').value), document.getElementById('actionLabelForUpdateDelete').innerHTML)">Save</button>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#inputIDModal">Delete Student</button><br /><br />
+        
+        <hr />
+
+        <div style="visibility:hidden" class="inputFromUser">
+            <div class="addOrUpdateStudent">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">USN / Roll No: </span>
+                    <input id="usnfield" type="number" class="form-control" placeholder="USN" aria-label="usn" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name: </span>
+                    <input id="namefield" type="text" class="form-control" placeholder="Student Name" aria-label="sname" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Branch / Department : </span>
+                    <input id="deptfield" type="text" class="form-control" placeholder="Department" aria-label="dept" aria-describedby="basic-addon1">
+                </div>
+
+                <br />
+                <div class="input-group mb-3">
+                    <div class="form-check form-switch">
+                        <input onchange="updateLabel()" class="form-check-input" type="checkbox" id="actioncheck" checked>
+                        <label id="actionLabel" class="form-check-label" for="actioncheck">Create</label>
+                    </div>
+                </div>
+
+                <button type="button" onclick="checkActionAndExecute()" class="btn btn-outline-success">Submit</button>
+
+            </div>
+        </div>
+        
+        <hr />
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "schoolRecords": [
+    {
+      "id": 1,
+      "usn": 101,
+      "sname": "ABC",
+      "dept": "CSE"
+    },
+    {
+      "id": 2,
+      "usn": 102,
+      "sname": "DEFGH",
+      "dept": "ECE"
+    }
+  ]
+}
