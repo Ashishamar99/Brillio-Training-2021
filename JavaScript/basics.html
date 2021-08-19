@@ -222,8 +222,8 @@
         <div>
             <h3>Events</h3>
 
-            <div>Hover over the square to change the color to green.</div>
-            <div style="background-color: red; height: 100px; width: 100px;font-weight:bold;" id="square" onmouseover="document.getElementById('square').style['background-color'] = 'green'" ></div>
+            <div id="labeldiv">Hover over the square to change the color to green.</div>
+            <div style="background-color: red; height: 100px; width: 100px;font-weight:bold;" id="square" onmouseover="document.getElementById('square').style['background-color'] = 'green';document.getElementById('labeldiv').innerHTML = 'Reload the page to start again! 😁';" ></div>
         </div>
         <hr />
 
