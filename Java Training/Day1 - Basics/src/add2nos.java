@@ -9,6 +9,6 @@ public class add2nos {
 		System.out.print("Enter b:: ");
 		int b = Read.sc.nextInt();
 		
-		System.out.println("Result:: " + (a+b));
+		System.out.println("Sum :: " + (a+b));
 	}
 }
