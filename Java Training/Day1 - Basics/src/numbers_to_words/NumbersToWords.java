@@ -9,8 +9,10 @@ public static void main(String[] args) {
 	final String[] onedigit = {"", " One", " Two", " Three", " Four", " Five", " Six", " Seven", " Eight", " Nine", " Ten", " Eleven", " Twelve", " Thirteen", " Fourteen", " Fifteen", " Sixteen", " Seventeen", " Eighteen", " Nineteen"};
 	final String hundred = " Hundred ";
 	final String thousand = " Thousand";
-	
-	int n = 9999;
+
+	System.out.println("Enter n:: ");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
 	int rem;
 	String res = "";
 	
