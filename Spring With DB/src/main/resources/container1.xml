@@ -20,10 +20,13 @@
     <bean id="arithmetic" class="com.brillio.aspect.ImplementArithmetic">
     </bean>
 
-    <bean id="validate" class="com.brillio.aspect.ValidateClass">
-    </bean>
+<!--    <bean id="validate" class="com.brillio.aspect.ValidateClass">-->
+<!--    </bean>-->
 
-    <bean id="validate1" class="com.brillio.aspect.ValidateClass1">
+<!--    <bean id="validate1" class="com.brillio.aspect.ValidateClass1">-->
+<!--    </bean>-->
+
+    <bean id="validate2" class="com.brillio.aspect.ValidateClass2">
     </bean>
 
 </beans>

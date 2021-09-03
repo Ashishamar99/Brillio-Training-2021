@@ -11,7 +11,7 @@ public class DemoAspect {
         obj = (Arithmetic) context.getBean("arithmetic");
 
         try{
-            System.out.println(obj.add(20, 5));
+            System.out.println(obj.add(20, 2000));
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
