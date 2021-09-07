@@ -35,4 +35,11 @@ public class MyRestController {
         //Designs a query for finding by id all by itself.
         //Optional returns a specified object or null if there is no matching record.
     }
+
+    @GetMapping("/student/fname/{fname}")
+    public Optional<StudentDTO> getAnyStudentByName(@PathVariable String fname){
+        return studentDAO.findByfname(fname);
+        //Designs a query for finding by id all by itself.
+        //Optional returns a specified object or null if there is no matching record.
+    }
 }

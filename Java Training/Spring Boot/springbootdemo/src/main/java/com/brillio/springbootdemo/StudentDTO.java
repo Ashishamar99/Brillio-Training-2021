@@ -10,7 +10,16 @@ public class StudentDTO {
     private String sid;
 
     @Column
-    String fname, lname, dob, address;
+    String fname;
+
+    @Column
+    String lname;
+
+    @Column
+    String dob;
+
+    @Column
+    String address;
 
     /*
     This means the field Studentdob is same as dob in the SQL Table.
