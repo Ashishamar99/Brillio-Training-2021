@@ -1,12 +1,16 @@
 package com.brillio.springbootdemo;
 
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity // Will automatically connect this POJO to the table.
 @Table(name = "sdetails")
 public class StudentDTO {
     @Id //Primary key is defined with an annotation @Id
-    @GeneratedValue //Specifies if the value is automatically incremented by 1.
+    //@GeneratedValue //Specifies if the value is automatically incremented by 1.
     private String sid;
 
     @Column
@@ -26,6 +30,8 @@ public class StudentDTO {
     @Column(name = "dob")
     String Studentdob;
     */
+
+
 
     public String getSid() {
         return sid;

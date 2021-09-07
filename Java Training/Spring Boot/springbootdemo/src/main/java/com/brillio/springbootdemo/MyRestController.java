@@ -19,6 +19,9 @@ public class MyRestController {
     @Autowired
     Student1DAO student1DAO;
 
+    @Autowired
+    MarksDAO marksDAO;
+
     @GetMapping("/")
     public String firstMethod(){
         return "Welcome to Spring Boot Application";
@@ -59,5 +62,17 @@ public class MyRestController {
     public List<Student1DTO> getAllStudentsMarks(){
         return student1DAO.findAll();
     }
+
+    @GetMapping("/student/getDetails")
+    public List<String> getStudentDetails(){
+        return student1DAO.getJointDetails();
+    }
+
+    @GetMapping("/student/getAvgMarks")
+    public List<String> getStudentAverageMarks(){
+        return marksDAO.getAvgMarks();
+    }
+
+
 
 }
