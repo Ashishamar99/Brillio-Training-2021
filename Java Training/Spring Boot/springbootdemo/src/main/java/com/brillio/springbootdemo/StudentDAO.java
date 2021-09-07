@@ -23,6 +23,6 @@ public interface StudentDAO extends JpaRepository<StudentDTO, String> {
     //We can use Operators like "And" or "Or" in the function name and that condition will be applied.
 
     public List<StudentDTO> findAllByFnameAndLname(String fname, String lname);
-    //If 2 ppl have same name then return that list.
+    //If 2 records have same name ie. fname and lname then return that list.
     //Using the "All" Keyword in the function name.
 }
