@@ -39,7 +39,17 @@ public class MyRestController {
     @GetMapping("/student/fname/{fname}")
     public Optional<StudentDTO> getAnyStudentByName(@PathVariable String fname){
         return studentDAO.findByfname(fname);
-        //Designs a query for finding by id all by itself.
-        //Optional returns a specified object or null if there is no matching record.
+        //Designs a query for finding by fname all by itself. We have specified only the field.
     }
+
+    @GetMapping("/student/name/{fname}/{lname}")
+    public Optional<StudentDTO> getAnyStudentFullName(@PathVariable String fname, @PathVariable String lname){
+        return studentDAO.findByFnameAndLname(fname, lname);
+    }
+
+    @GetMapping("/student/findallname/{fname}/{lname}")
+    public List<StudentDTO> getStudentsByCommonName(@PathVariable String fname, @PathVariable String lname){
+        return studentDAO.findAllByFnameAndLname(fname, lname);
+    }
+
 }
