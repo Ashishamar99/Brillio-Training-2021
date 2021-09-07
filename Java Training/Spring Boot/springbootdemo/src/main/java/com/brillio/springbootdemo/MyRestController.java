@@ -16,6 +16,9 @@ public class MyRestController {
     StudentDAO studentDAO;
     // AutoWired will create an object and give us that created one.
 
+    @Autowired
+    Student1DAO student1DAO;
+
     @GetMapping("/")
     public String firstMethod(){
         return "Welcome to Spring Boot Application";
@@ -50,6 +53,11 @@ public class MyRestController {
     @GetMapping("/student/findallname/{fname}/{lname}")
     public List<StudentDTO> getStudentsByCommonName(@PathVariable String fname, @PathVariable String lname){
         return studentDAO.findAllByFnameAndLname(fname, lname);
+    }
+
+    @GetMapping("/student/marks")
+    public List<Student1DTO> getAllStudentsMarks(){
+        return student1DAO.findAll();
     }
 
 }
