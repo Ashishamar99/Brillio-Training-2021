@@ -29,6 +29,7 @@ public class MyRestController {
     }
 
     @GetMapping("/displayStudents")
+    @Cacheable("students")
     public List<StudentDTO> getStudents(){
 
         return studentDAO.findAll();
@@ -37,7 +38,7 @@ public class MyRestController {
     }
 
     @GetMapping("/student/{id}") // Here ID is a path variable, basically a variable value which is passed in the URL
-    @Cacheable(key = "#sid", value = "StudentDTO")
+    // @Cacheable(key = "#sid", value = "StudentDTO") // REDIS CACHING. ENABLE CACHING IN THE BEGINNING OF THE CLASS.
     public Optional<StudentDTO> getAnyStudent(@PathVariable String id){
         return studentDAO.findById(id);
         //Designs a query for finding by id all by itself.
