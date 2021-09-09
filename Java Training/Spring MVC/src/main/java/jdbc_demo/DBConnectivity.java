@@ -1,4 +1,4 @@
-package com.brillio.jdbc_demo;
+package jdbc_demo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

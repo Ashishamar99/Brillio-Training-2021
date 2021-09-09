@@ -1,4 +1,4 @@
-package com.brillio.jdbc_demo;
+package jdbc_demo;
 
 public class SDetailsDTO {
     private String sid, fname, lname, dob, address;
