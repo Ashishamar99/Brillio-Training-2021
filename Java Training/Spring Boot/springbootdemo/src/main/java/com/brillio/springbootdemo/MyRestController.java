@@ -1,6 +1,7 @@
 package com.brillio.springbootdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +37,7 @@ public class MyRestController {
     }
 
     @GetMapping("/student/{id}") // Here ID is a path variable, basically a variable value which is passed in the URL
+    @Cacheable(key = "#sid", value = "StudentDTO")
     public Optional<StudentDTO> getAnyStudent(@PathVariable String id){
         return studentDAO.findById(id);
         //Designs a query for finding by id all by itself.
