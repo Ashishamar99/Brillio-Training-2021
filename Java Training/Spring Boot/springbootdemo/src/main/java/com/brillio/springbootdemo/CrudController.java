@@ -1,10 +1,12 @@
 package com.brillio.springbootdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/sdetail")
+@Component // For Junit Test Cases.
 public class CrudController {
 
     @Autowired
