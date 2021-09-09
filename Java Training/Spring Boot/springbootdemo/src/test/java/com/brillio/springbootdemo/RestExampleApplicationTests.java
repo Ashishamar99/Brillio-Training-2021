@@ -26,6 +26,8 @@ class RestExampleApplicationTests {
 
 	@Autowired
 	MyRestController controller;
+
+	@Autowired
 	CrudController crudController;
 
 	@Test
@@ -86,6 +88,51 @@ class RestExampleApplicationTests {
 			Optional<StudentDTO> list= controller.getAnyStudent("5000");
 			assertEquals(list, Optional.empty());
 		} catch (Exception e) {
+			fail();
+		}
+	}
+
+	@Test
+	@Order(6)
+	public void testCrudControllerInsertion(){
+		try {
+			StudentDTO student = new StudentDTO();
+			student.setSid("150");
+			student.setAddress("abc, def");
+			student.setFname("Gamma");
+			student.setLname("Delta");
+			student.setDob("1991-01-01");
+			String result = crudController.insertStudent(student);
+			assertEquals(result, "Data is Inserted");
+		} catch (Exception e){
+			fail();
+		}
+	}
+
+	@Test
+	@Order(7)
+	public void testCrudControllerUpdate(){
+		try {
+			StudentDTO student = new StudentDTO();
+			student.setSid("150");
+			student.setAddress("abc, def");
+			student.setFname("Zeta");
+			student.setLname("Delta");
+			student.setDob("1991-01-01");
+			String result = crudController.updateStudent(student);
+			assertEquals(result, "Data is Updated");
+		} catch (Exception e){
+			fail();
+		}
+	}
+
+	@Test
+	@Order(8)
+	public void testCrudControllerDelete(){
+		try {
+			String result = crudController.deleteStudent("150");
+			assertEquals(result, "Data is Deleted");
+		} catch (Exception e){
 			fail();
 		}
 	}
