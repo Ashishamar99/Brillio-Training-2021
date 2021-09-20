@@ -1,0 +1,124 @@
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>create-react-app schoolProject
+'create-react-app' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>npm install create-react-app
+npm WARN Ashish@1.0.0 No description
+npm WARN Ashish@1.0.0 No repository field.
+
++ create-react-app@4.0.3
+updated 1 package and audited 111 packages in 5.344s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 5 high severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>npx create-react-app schoolProject
+Cannot create a project named "schoolProject" because of npm naming restrictions:
+
+  * name can no longer contain capital letters
+
+Please choose a different project name.
+
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>npx create-react-app school_project
+
+Creating a new React app in C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+[        ..........] | extract:send: sill tarball trying babel-plugin-jest-hoist@^26.6.2 by hash: sha512-PO9t0697lNTmcEHH69mdtYiOIkkOlj
+> core-js@2.6.12 postinstall C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project\node_modules\babel-runtime\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js@3.17.3 postinstall C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js-pure@3.17.3 postinstall C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project\node_modules\core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> ejs@2.7.4 postinstall C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project\node_modules\ejs
+> node ./postinstall.js
+
++ cra-template@1.1.2
++ react-scripts@4.0.3
++ react-dom@17.0.2
++ react@17.0.2
+added 1905 packages from 708 contributors and audited 1908 packages in 1015.766s
+
+148 packages are looking for funding
+  run `npm fund` for details
+
+found 3 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Installing template dependencies using npm...
+npm WARN @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.15.4 requires a peer of @babel/core@^7.13.0 but none is installed. You must install peer dependencies yourself.
+npm WARN tsutils@3.21.0 requires a peer of typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack-chokidar2\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ @testing-library/user-event@12.8.3
++ web-vitals@1.1.2
++ @testing-library/react@11.2.7
++ @testing-library/jest-dom@5.14.1
+added 43 packages from 87 contributors and audited 1951 packages in 44.842s
+
+149 packages are looking for funding
+  run `npm fund` for details
+
+found 3 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing template package using npm...
+
+npm WARN @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.15.4 requires a peer of @babel/core@^7.13.0 but none is installed. You must install peer dependencies yourself.
+npm WARN tsutils@3.21.0 requires a peer of typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack-chokidar2\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+removed 1 package and audited 1950 packages in 10.567s
+
+149 packages are looking for funding
+  run `npm fund` for details
+
+found 3 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Success! Created school_project at C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React\school_project
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd school_project
+  npm start
+
+Happy hacking!
+
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>
+C:\Users\Ashish\Desktop\Brillio\Brillio-Training-2021\React>
