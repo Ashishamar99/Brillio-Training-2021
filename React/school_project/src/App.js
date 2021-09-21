@@ -4,6 +4,7 @@ import Add from './components/AddTwoNos';
 import {Subtracttwonumbers} from './components/subtracttwonumbers';
 import {Multiplicationtables} from './components/multiplicationtables';
 import {Counter} from './components/counter';
+import Student from './components/student';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Multiplicationtables />
       <hr />
       <Counter />
+      <hr />
+      <Student />
       <hr />
     </div>
   );

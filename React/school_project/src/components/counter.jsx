@@ -5,7 +5,7 @@ import "../css/counter.css";
 export const Counter = () => {
 
     const f1 = () => {
-        if(num == 0) return "blue"
+        if(num === 0) return "blue"
         else if(num > 0) return "green"
         else if(num < 0) return "red"
     }
