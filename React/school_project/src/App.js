@@ -5,6 +5,7 @@ import {Subtracttwonumbers} from './components/subtracttwonumbers';
 import {Multiplicationtables} from './components/multiplicationtables';
 import {Counter} from './components/counter';
 import Student from './components/student';
+import InsertStudent from './components/insertstudentform';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Counter />
       <hr />
       <Student />
+      <hr />
+      <InsertStudent />
       <hr />
     </div>
   );
