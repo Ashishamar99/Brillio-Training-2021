@@ -7,12 +7,8 @@ class Student extends Component {
         studentData:[],
     };
 
-    getData = async() => {
-        // let response = await axios.get("localhost:9092/displayStudents");
-        // this.setState({
-        //     studentData: response.data
-        // });
-
+    //////////////////////////////// we will be loading the backend data using componentDidMount.
+    componentDidMount() {
         axios
         .get('http://localhost:9092/displayStudents') //Have to specify http protocol.
         .then((response) => {
@@ -22,10 +18,28 @@ class Student extends Component {
             console.error(err);
         })
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //getData will need a button to be called.
+    // getData = async() => {
+    //     // let response = await axios.get("localhost:9092/displayStudents");
+    //     // this.setState({
+    //     //     studentData: response.data
+    //     // });
+
+    //     axios
+    //     .get('http://localhost:9092/displayStudents') //Have to specify http protocol.
+    //     .then((response) => {
+    //         console.table(response.data);
+    //         this.setState({studentData: response.data})
+    //     }).catch((err) => {
+    //         console.error(err);
+    //     })
+    // }
 
     render() { 
         return <div>
                 <table>
+                    <tbody>
                     {this.state.studentData.map((singleStudent) => {
                         return (
                             <tr>
@@ -43,9 +57,10 @@ class Student extends Component {
                             </tr>
                             );
                     })}
+                    </tbody>
                 </table>
                     <br />
-                    <button onClick={this.getData}>Get Data</button>
+                    {/* <button onClick={this.getData}>Get Data</button> */}
                 </div>;
     }
 }
