@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+let api = axios.create({baseURL: 'http://localhost:9092'});
+
 class Student extends Component {
 
     state = {
@@ -9,8 +11,8 @@ class Student extends Component {
 
     //////////////////////////////// we will be loading the backend data using componentDidMount.
     componentDidMount() {
-        axios
-        .get('http://localhost:9092/displayStudents') //Have to specify http protocol.
+        api
+        .get('/displayStudents')
         .then((response) => {
             console.table(response.data);
             this.setState({studentData: response.data})
