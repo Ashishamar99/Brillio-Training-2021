@@ -27,16 +27,17 @@ class Add extends React.Component {
                     <div className="inner-container">
                         <form>
                             <label for="num1">Enter Number 1:: </label>
-                            <input type="text" id="num1" name="num1" onChange={this.setData}/>
+                            <input type="number" id="num1" name="num1" onChange={this.setData}/>
 
                             <br />
                             <label for="num2">Enter Number 2:: </label>
-                            <input type="text" id="num2" name="num2" onChange={this.setData}/>
+                            <input type="number" id="num2" name="num2" onChange={this.setData}/>
                             <br />
 
                             <label for="num3">Result:: </label>
-                            <input type="text" id="num3" name="num3" value={this.state.num3}/>
-
+                            <input type="number" id="num3" name="num3" value={this.state.num3}/>
+                            <br />
+                            
                             <input type="button" value="Calculate" onClick={this.calculate}/>
 
                             
