@@ -9,3 +9,13 @@ apache-jmeter-5.4.1/*
 /node_modules
 /.pnp
 .pnp.js
+
+/.metadata/
+.idea/
+*.class
+*/.mvn/*
+*.project
+*.prefs
+*/*/.metadata/*
+*/.idea/
+/Responsive pages with media queries/
