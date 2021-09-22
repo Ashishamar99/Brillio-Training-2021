@@ -3,3 +3,9 @@ Component BoilerPlate.html
 linkedin.svg
 Assignment 3
 *template*
+apache-jmeter-5.4.1/*
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
