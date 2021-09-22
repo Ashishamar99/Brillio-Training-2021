@@ -6,11 +6,12 @@ import {Multiplicationtables} from './components/multiplicationtables';
 import {Counter} from './components/counter';
 import Student from './components/student';
 import InsertStudent from './components/insertstudentform';
+import LoginForm from './components/loginform';
 
 function App() {
   return (
     <div className="App">
-      <Add/>
+      {/* <Add/>
       <hr />
       <Subtracttwonumbers/>
       <hr />
@@ -20,8 +21,11 @@ function App() {
       <hr />
       <Student />
       <hr />
-      <InsertStudent />
+      <InsertStudent /> */}
       <hr />
+      <LoginForm />
+      <hr />
+      <Counter />
     </div>
   );
 }
