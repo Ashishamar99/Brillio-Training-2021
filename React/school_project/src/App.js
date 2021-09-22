@@ -25,7 +25,9 @@ function App() {
       <hr />
       <LoginForm />
       <hr />
+      {/* <h3>Using Reusable Buttons</h3>
       <Counter />
+      <hr /> */}
     </div>
   );
 }
