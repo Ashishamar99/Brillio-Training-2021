@@ -7,8 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 configure({ adapter: new Adapter() }); //enzyme - react 16 hooks support
 
-import Counter from './counter'
-
 describe('this is a button testing module', () => {
     it('to check if button component is loaded or not', () => {
 
@@ -38,6 +36,7 @@ describe('this is a button testing module', () => {
     });
 })
 
+import Counter from './counter'
 
 //FOR THE TEST CASE TO WORK EITHER cc SHOULD HAVE A DEFAULT EXPORT OR USE AN rfce. 
 describe('this is a counter testing module', () => {
@@ -57,10 +56,9 @@ describe('this is a counter testing module', () => {
         expect(inst.state.num).toBe(0);
     });
 
-    // //USE .trim() ON THE STRING (RECEIVED VALUE) TO CHECK FOR EXPECTED VALUE IN expect(). 
-    // it('to check the name of the button', () => {
-    //     const wrapper = shallow(<ReusableButtonProps value="submit" handleClick={() => {}} />);
-    //     const len = wrapper.find("button").at(0).text(); 
-    //     expect(len.trim()).toEqual("submit");
+    // it("to check clicking of button", () => {
+    //     const wrapper = shallow(<Counter />);
+    //     wrapper.find("But").at(0).simulate("click");
+    //     expect(wrapper.state.num).toBe(1);
     // });
 })

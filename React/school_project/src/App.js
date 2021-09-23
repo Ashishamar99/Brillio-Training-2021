@@ -3,7 +3,7 @@ import './App.css';
 import Add from './components/AddTwoNos';
 import {Subtracttwonumbers} from './components/subtracttwonumbers';
 import {Multiplicationtables} from './components/multiplicationtables';
-import {Counter} from './components/counter';
+import Counter from './components/counter';
 import Student from './components/student';
 import InsertStudent from './components/insertstudentform';
 import LoginForm from './components/loginform';
