@@ -57,5 +57,5 @@ const Counter = () => {
     )
 }
 
-
+//FOR THE TEST CASE TO WORK EITHER cc SHOULD HAVE A DEFAULT EXPORT OR USE AN rfce. 
 export default Counter;
