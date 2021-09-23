@@ -3,7 +3,7 @@ import {useState} from 'react';
 import "../css/counter.css";
 import ReusableButtonProps from './reusablebuttonprops';
 
-export const Counter = () => {
+const Counter = () => {
 
     const incCount = () => {
         setNum(num + 1)
@@ -56,3 +56,6 @@ export const Counter = () => {
         </div>
     )
 }
+
+
+export default Counter;
