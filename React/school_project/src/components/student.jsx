@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Paginate from './paginate';
 
 let api = axios.create({baseURL: 'http://localhost:9092'});
 
@@ -7,6 +8,14 @@ class Student extends Component {
 
     state = {
         studentData:[],
+
+        columns: [
+            { dataField: 'sid', text: 'Student ID', sort: true },
+            { dataField: 'fname', text: 'First Name', sort: true },
+            { dataField: 'lname', text: 'Last Name', sort: true },
+            { dataField: 'dob', text: 'DOB', sort: true },
+            { dataField: 'address', text: 'Address', sort: true },
+        ]
     };
 
     //////////////////////////////// we will be loading the backend data using componentDidMount.
@@ -38,9 +47,11 @@ class Student extends Component {
     //     })
     // }
 
+    
+    
     render() { 
         return <div>
-                <table>
+                {/* <table>
                     <tbody>
                     {this.state.studentData.map((singleStudent) => {
                         return (
@@ -49,21 +60,24 @@ class Student extends Component {
                                 <td>{singleStudent.fname}</td>
                                 <td>{singleStudent.lname}</td>
                                 <td>{singleStudent.dob}</td>
-                                <td>{singleStudent.address}</td>
+                                <td>{singleStudent.address}</td> */}
                                 
                                 {/*
                                 NOTE - 
                                 //WE CAN ALSO USE THE BELOW SYNTAX FOR ACCESSING THE DATA
                                 <td>{x["address"]}</td> */}
 
-                            </tr>
+                            {/* </tr>
                             );
                     })}
                     </tbody>
-                </table>
-                    <br />
-                    {/* <button onClick={this.getData}>Get Data</button> */}
-                </div>;
+                </table> */}
+        <Paginate
+          id="sid"
+          data={this.state.studentData}
+          columns={this.state.columns}
+        />
+        </div>
     }
 }
  
