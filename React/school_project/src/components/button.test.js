@@ -56,9 +56,15 @@ describe('this is a counter testing module', () => {
         expect(inst.state.num).toBe(0);
     });
 
-    // it("to check clicking of button", () => {
-    //     const wrapper = shallow(<Counter />);
-    //     wrapper.find("But").at(0).simulate("click");
-    //     expect(wrapper.state.num).toBe(1);
-    // });
+    //TODO: Implement Simulation Testing on a button component.
+    it("to check increase Count function of counter", () => {
+        const wrapper = shallow(<Counter />);
+        // let obj = new Counter();
+        // obj.incCount();
+        // expect(obj.state.num).toBe(1);
+        let inst = wrapper.instance();
+        inst.incCount();
+        // wrapper.find("button").at(0).simulate("click");
+        expect(inst.state.num).toBe(1);
+    });
 })
